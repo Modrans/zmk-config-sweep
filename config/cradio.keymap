@@ -66,38 +66,38 @@
             >;
         };
 
-        func_layer {
-            bindings = <
+//        func_layer {
+//            bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ to MOUSE │  F7      │  F8      │  F9      │  F12     │   │          │          │          │          │          │
-            &to 3      &kp F7     &kp F8     &kp F9     &kp F12        &trans     &trans     &trans     &trans     &trans
+//            &to 3      &kp F7     &kp F8     &kp F9     &kp F12        &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TILDE   │  F4      │          │  F6      │  F11     │   │  CAPS    │          │  LBKT    │  RBKT    │ BSLS PIPE│
-            &kp TILDE  &kp F4     &trans     &kp F6     &kp F11        &kp CAPS   &trans     &kp LBKT   &kp RBKT   &kp BSLS
+//            &kp TILDE  &kp F4     &trans     &kp F6     &kp F11        &kp CAPS   &trans     &kp LBKT   &kp RBKT   &kp BSLS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F1      │  F2      │  F3      │  F10     │   │          │          │          │          │          │
-            &trans     &kp F1     &kp F2     &kp F3     &kp F10         &trans    &trans     &trans     &trans     &trans
+//            &trans     &kp F1     &kp F2     &kp F3     &kp F10         &trans    &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &kp ENTER  &trans
+//                                             &trans     &trans         &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+//            >;
+//        };
 
-        mouse_layer {
-            bindings = <
+//        mouse_layer {
+//            bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+//           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+//          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+//            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+//                                             &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+//            >;
+//        };
     };
 };
