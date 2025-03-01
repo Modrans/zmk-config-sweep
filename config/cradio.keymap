@@ -61,7 +61,7 @@
         //│  GRAVE   │  1       │  2       │  3       │  BCKSLSH │   │  PG_DN   │  LSHFT   │  ESC     │  DEL     │  LGUI    │
             &kp GRAVE   &kp N1    &kp N2     &kp N3     &kp BSLS       &kp PG_DN  &kp LSHFT  &kp ESC    &kp DEL    &kp LGUI 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp DOT    &kp N0         &trans     &trans
+//                                             &kp DOT    &kp N0         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
