@@ -88,16 +88,16 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │          │   │          │          │          │ PROFILE 0│  RESET   │
-            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &trans       &trans     &trans     &trans    &bt BT_SEL 0 &sys_reset
+        //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │          │          │ PROFILE 0│  RESET   │
+            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans     &trans     &trans    &bt BT_SEL 0 &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CTL-A   │          │          │          │   │          │          │  RESET   │ PROFILE 1│BOOTLOADER│
-           &kp LC(A)    &trans     &trans     &trans     &trans         &trans     &trans    &sys_reset &bt BT_SEL 1 &bootloader
+        //│  CTL-A   │  MB3     │   MB2    │  MB1       SCRL_DWN │   │          │          │  RESET   │ PROFILE 1│BOOTLOADER│
+           &kp LC(A)   &mkp MB3    &mkp MB2  &mkp MB1   &msc SCRL_DOWN  &trans    &trans    &sys_reset &bt BT_SEL 1 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │ CLEAR BT │ PROFILE 2│          │
-            &trans     &trans     &trans     &trans     &trans         &trans     &trans     &bt BT_CLR &bt BT_SEL 2 &trans
+        //│          │          │          │          │  DEL     │   │          │          │ CLEAR BT │ PROFILE 2│          │
+            &trans     &trans     &trans     &trans     &kp DEL         &trans     &trans     &bt BT_CLR &bt BT_SEL 2 &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to 0      &trans         &trans     &trans
+                                             &to 0      &kp BSPC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
