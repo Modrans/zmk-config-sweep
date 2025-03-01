@@ -59,9 +59,9 @@
             &kp SEMI   &kp N4     &kp N5     &kp N6     &kp EQUAL      &kp UNDER  &kp LEFT   &kp DOWN   &kp RIGHT   &kp INS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  GRAVE   │  1       │  2       │  3       │  BCKSLSH │   │  PG_DN   │  LSHFT   │  ESC     │  DEL     │  LGUI    │
-            &kp GRAVE   &kp N1    &kp N2     &kp N3     &kp BSLS       &kp PG_DN  &kp LSHFT  &kp ESC    &kp DEL    &kp LGUI 
+            &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp BSLH       &kp PG_DN  &kp LSHFT  &kp ESC    &kp DEL    &kp LGUI 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//                                             &kp DOT    &kp N0         &trans     &trans
+                                             &kp DOT    &kp N0         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -73,12 +73,12 @@
             &to 3      &kp F7     &kp F8     &kp F9     &kp F12        &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TILDE   │  F4      │          │  F6      │  F11     │   │  CAPS    │          │  LBKT    │  RBKT    │ BSLS PIPE│
-//            &kp TILDE  &kp F4     &trans     &kp F6     &kp F11        &kp CAPS   &trans     &kp LBKT   &kp RBKT   &kp BSLS
+            &kp TILDE  &kp F4     &trans     &kp F6     &kp F11        &kp CAPS   &trans     &kp LBKT   &kp RBKT   &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F1      │  F2      │  F3      │  F10     │   │          │          │          │          │          │
-//            &trans     &kp F1     &kp F2     &kp F3     &kp F10         &trans    &trans     &trans     &trans     &trans
+            &trans     &kp F1     &kp F2     &kp F3     &kp F10         &trans    &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//                                             &trans     &trans         &kp ENTER  &trans
+                                             &trans     &trans         &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
