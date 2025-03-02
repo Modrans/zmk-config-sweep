@@ -90,7 +90,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │          │          │ PROFILE 0│  RESET   │
-//            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans     &trans     &trans    &bt BT_SEL 0 &sys_reset
+            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans     &trans     &trans    &bt BT_SEL 0 &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CTL-A   │  MB3     │   MB2    │  MB1       SCRL_DWN │   │          │          │  RESET   │ PROFILE 1│BOOTLOADER│
            &kp LC(A)   &mkp MB3    &mkp MB2  &mkp MB1   &msc SCRL_DOWN  &trans    &trans    &sys_reset &bt BT_SEL 1 &bootloader
