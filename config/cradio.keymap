@@ -91,11 +91,11 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │          │          │ PROFILE 0│  RESET   │
-            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans     &trans     &trans    &bt BT_SEL 0 &sys_reset
+        //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │          │          │ PROFILE 0│          │
+            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans     &trans     &trans   &bt BT_SEL 0 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CTL-A   │  MB3     │   MB2    │  MB1       SCRL_DWN │   │          │          │  RESET   │ PROFILE 1│BOOTLOADER│
-           &kp LC(A)   &mkp MB3    &mkp MB2  &mkp MB1   &msc SCRL_DOWN  &trans    &trans    &sys_reset &bt BT_SEL 1 &bootloader
+        //│  CTL-A   │  MB3     │   MB2    │  MB1       SCRL_DWN │   │          │          │          │ PROFILE 1│          │
+           &kp LC(A)   &mkp MB3    &mkp MB2  &mkp MB1   &msc SCRL_DOWN  &trans    &trans     &trans    &bt BT_SEL 1 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │  DEL     │   │          │          │ CLEAR BT │ PROFILE 2│          │
             &trans     &trans     &trans     &trans     &kp DEL         &trans     &trans     &bt BT_CLR &bt BT_SEL 2 &trans
@@ -109,11 +109,11 @@
         mouse2_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  MOUSE   │ CTL-SFT-T│ C-S-TAB  │ CTL-TAB  │          │   │          │          │          │ PROFILE 0│  RESET   │
-            &to 3     &kp LC(LS(T)) &kp LC(LS(TAB)) &kp LC(TAB) &trans &trans     &trans     &trans    &bt BT_SEL 0 &sys_reset
+        //│  MOUSE   │ CTL-SFT-T│ C-S-TAB  │ CTL-TAB  │          │   │          │          │          │ PROFILE 0│          │
+            &to 3     &kp LC(LS(T)) &kp LC(LS(TAB)) &kp LC(TAB) &trans &trans     &trans     &trans    &bt BT_SEL 0 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│  RESET   │          │          │          │   │          │          │  RESET   │ PROFILE 1│BOOTLOADER│
-          &bootloader &sys_reset &trans     &trans     &trans         &trans     &trans    &sys_reset &bt BT_SEL 1 &bootloader
+        //│          │          │          │          │          │   │          │          │          │ PROFILE 1│          │
+            &trans     &trans     &trans     &trans     &trans         &trans     &trans    &trans     &bt BT_SEL 1 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │ CLEAR BT │ PROFILE 2│          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &bt BT_CLR &bt BT_SEL 2 &trans
