@@ -25,6 +25,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_qu {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp Q &kp U>;
+        };
+    };
+
+
 //    conditional_layers {
 //        compatible = "zmk,conditional-layers";
 //        tri_layer {
@@ -40,8 +50,8 @@
         base_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  O       │  P       │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp O      &kp P
+        //│  REPEAT  │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  O       │  P       │
+           &key_repeat &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
             &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O  
