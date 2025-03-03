@@ -31,7 +31,7 @@
             bindings = <&kp APOS>, <&kp SEMI>;
         };
 
-        td_io: tap_dance_apos_semi {
+        td_io: tap_dance_i_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
