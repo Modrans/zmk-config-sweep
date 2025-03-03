@@ -23,6 +23,21 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        &td_apsem: tap_dance_apos_semi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp APOS>, <&kp SEMI>;
+        }
+
+        &td_io: tap_dance_apos_semi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp I>, <&kp O>;
+        }
+
     };
 
     combos {
@@ -50,11 +65,11 @@
         base_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  REPEAT  │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  P       │
-           &key_repeat &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp P
+        //│  REPEAT  │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  aposemi │
+           &key_repeat &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &td_apsem
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
-            &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O  
+        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  td IO   │  O       │
+            &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &td_io     &kp O  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │   V      │   │  N       │  M       │ , <      │ . >      │ / ?      │
             HRML(Z,        X,         C,         D)     &kp V          &kp K     HRMR(H,      COMMA,      DOT,      FSLH)
@@ -101,14 +116,14 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │          │          │ PROFILE 0│          │
-            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans     &trans     &trans   &bt BT_SEL 0 &trans
+        //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │  C-A-D   │          │ PROFILE 0│          │
+            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans   LC(LA(DEL))  &trans   &bt BT_SEL 0 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CTL-A   │  MB3     │   MB2    │  MB1       SCRL_DWN │   │          │          │          │ PROFILE 1│          │
            &kp LC(A)   &mkp MB3    &mkp MB2  &mkp MB1   &msc SCRL_DOWN  &trans    &trans     &trans    &bt BT_SEL 1 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │  DEL     │   │          │          │ CLEAR BT │ PROFILE 2│          │
-            &trans     &trans     &trans     &trans     &kp DEL         &trans     &trans     &bt BT_CLR &bt BT_SEL 2 &trans
+        //│ ctl-z/gui│ ctl-x/alt│ ctl-c/ctl│ ctl-v/sft│  DEL     │   │          │          │ CLEAR BT │ PROFILE 2│          │
+           &mt LGUI (LC(Z)) &mt LALT (LC(X)) &mt LCTRL (LC(C)) &mt LSHFT (LC(V)) &kp DEL &trans &trans &bt BT_CLR &bt BT_SEL 2 &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &to 0      &kp BSPC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
