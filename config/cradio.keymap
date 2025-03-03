@@ -27,7 +27,7 @@
         td_apsem: tap_dance_apos_semi {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>;    
             bindings = <&kp APOS>, <&kp SEMI>;
         };
 
@@ -126,7 +126,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  MOUSE2  │  BACK    │  FORWARD │  ENTER   │ SCRL_UP  │   │          │  C-A-D   │          │ PROFILE 0│          │
-            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP  &trans   LC(LA(DEL))  &trans   &bt BT_SEL 0 &trans
+            &to 4    &kp LA(LEFT) &kp LA(RIGHT) &kp ENTER &msc SCRL_UP &trans   &kp LC(LA(DEL)) &trans &bt BT_SEL 0 &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CTL-A   │  MB3     │   MB2    │  MB1       SCRL_DWN │   │          │          │          │ PROFILE 1│          │
            &kp LC(A)   &mkp MB3    &mkp MB2  &mkp MB1   &msc SCRL_DOWN  &trans    &trans     &trans    &bt BT_SEL 1 &trans
