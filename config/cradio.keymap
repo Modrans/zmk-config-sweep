@@ -47,6 +47,19 @@
             key-positions = <0 1>;
             bindings = <&qu>;
         };
+
+        combo_bootl {
+            timeout-ms = <50>;
+            key-positions = <21 25>;  
+            bindings = <&bootloader>;
+        };
+
+        combo_bootr {
+            timeout-ms = <50>;
+            key-positions = <26 30>;  
+            bindings = <&bootloader>;
+        };
+
     };
 
     macros {
