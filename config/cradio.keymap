@@ -50,13 +50,13 @@
 
         combo_bootl {
             timeout-ms = <50>;
-            key-positions = <21 25>;  
+            key-positions = <0 3 5>;  
             bindings = <&bootloader>;
         };
 
         combo_bootr {
             timeout-ms = <50>;
-            key-positions = <26 30>;  
+            key-positions = <6 8 10>;  
             bindings = <&bootloader>;
         };
 
