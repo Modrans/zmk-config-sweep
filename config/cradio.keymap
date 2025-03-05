@@ -44,7 +44,7 @@
         compatible = "zmk,combos";
         combo_qu {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             bindings = <&qu>;
         };
     };
@@ -54,7 +54,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp Q &kp U>
+                = <&macro_tap &kp Q &kp U>
                 ;
         };
     };    
